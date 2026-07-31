@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PrecoPet — Compare preços de produtos pet</title>
+<meta name="description" content="Compare preços de ração, antipulgas e acessórios pet nas maiores lojas do Brasil. Encontre o menor preço em segundos.">
+<meta name="robots" content="index, follow">
+<meta name="google-site-verification" content="COLE_AQUI_SEU_CODIGO_DO_SEARCH_CONSOLE">
+
+<!-- Open Graph -->
+<meta property="og:title" content="PrecoPet — Compare preços pet">
+<meta property="og:description" content="Encontre o menor preço de produtos pet. Petz, Cobasi, Petlove, Amazon, Shopee e mais.">
+<meta property="og:image" content="https://www.precopet.com.br/og-image.png">
+<meta property="og:url" content="https://www.precopet.com.br">
+<meta property="og:type" content="website">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/icon-192.png">
+<meta name="theme-color" content="#00C27C">
+
+<!-- AdSense (descomentar quando aprovado) -->
+<!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script> -->
+
+<!-- Analytics (descomentar quando ativado) -->
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=GT-XXXXXXXX"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','GT-XXXXXXXX');</script> -->
+
+<!-- Schema.org -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"PrecoPet","url":"https://www.precopet.com.br","description":"Comparador de preços de produtos pet"}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <a class="logo" href="/">Preco<span>Pet</span></a>
+  <p class="tagline">Menor preço para seu pet</p>
+  <button class="btn-theme" id="theme-btn" onclick="toggleTheme()">🌙</button>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Compare preços pet <span class="accent">nas maiores lojas</span></h1>
+  <p class="hero-sub">Preços de <span id="stat-lojas">7</span> lojas em um só lugar. Sem cadastro, sem pegadinha.</p>
+  <div class="hero-search">
+    <input type="text" id="busca" placeholder="Buscar produto..." oninput="filtrar()">
+  </div>
+  <div class="cats" id="cats"></div>
+</section>
+
+<!-- PRODUTOS -->
+<section class="section" id="sec-produtos">
+  <div class="sec-head">
+    <h2>Produtos</h2>
+    <span class="sec-count" id="prod-count"></span>
+  </div>
+  <div class="grid" id="grid"></div>
+</section>
+
+<!-- CUPONS -->
+<section class="section alt" id="sec-cupons">
+  <div class="sec-head">
+    <h2>Cupons de desconto</h2>
+  </div>
+  <div class="cupons-grid" id="cupons-grid"></div>
+</section>
+
+<!-- SOBRE (mínimo legal) -->
+<section class="section" id="sec-sobre">
+  <h2>Sobre o PrecoPet</h2>
+  <p>Comparador de preços independente. Não vendemos produtos — mostramos onde está mais barato para você decidir.</p>
+  <p>Utilizamos links de afiliado: ao comprar por um dos nossos links, recebemos comissão <strong>sem custo adicional para você</strong>.</p>
+  <p>Este site participa do Programa de Associados da Amazon e de outros programas de afiliados. Recebemos comissão pelas compras qualificadas realizadas através dos nossos links.</p>
+  <p class="legal">Marcas citadas pertencem aos seus respectivos titulares (Lei 9.279/96). Não temos vínculo oficial, parceria ou patrocínio com as lojas mencionadas. Preços sujeitos a alteração sem aviso prévio — confirme sempre no site da loja antes de comprar.</p>
+  <p class="legal"><a href="/termos.html">Termos de Uso</a> · <a href="/privacidade.html">Política de Privacidade</a> · 📧 contato@precopet.com.br</p>
+  <p class="legal" id="atualizado"></p>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>© 2026 PrecoPet — precopet.com.br</p>
+  <p class="legal">Este site participa do Programa de Associados da Amazon e de outros programas de afiliados. Recebemos comissão pelas compras qualificadas. Este site não exige cadastro nem coleta dados pessoais.</p>
+</footer>
+
+<!-- COOKIE BANNER -->
+<div id="cookie-banner"></div>
+
+<!-- GERADOR DE POSTS (página secreta /#divulgacao) -->
+<div class="page-hidden" id="page-divulgacao">
+  <section class="section">
+    <h2>📲 Gerador de posts</h2>
+    <p>Monte o texto para Instagram/Facebook/WhatsApp e copie com 1 clique.</p>
+    <div class="div-controls">
+      <div class="campo">
+        <label>Tipo</label>
+        <select id="div-tipo" onchange="gerarPost()">
+          <option value="oferta">Oferta (preço + economia)</option>
+          <option value="produto">Produto em destaque</option>
+          <option value="cupom">Cupom de desconto</option>
+          <option value="ranking">Top 3 economia</option>
+        </select>
+      </div>
+      <div class="campo" id="div-campo-produto">
+        <label>Produto</label>
+        <select id="div-produto" onchange="gerarPost()"></select>
+      </div>
+      <div class="campo" id="div-campo-cupom" style="display:none">
+        <label>Cupom</label>
+        <select id="div-cupom" onchange="gerarPost()"></select>
+      </div>
+      <div class="campo">
+        <label>Tom</label>
+        <select id="div-tom" onchange="gerarPost()">
+          <option value="emocionante">Empolgado</option>
+          <option value="direto">Direto</option>
+          <option value="informativo">Informativo</option>
+        </select>
+      </div>
+    </div>
+    <div class="post-box">
+      <div class="post-header">
+        <span>Texto pronto</span>
+        <button onclick="copiarPost()">📋 Copiar</button>
+      </div>
+      <pre id="post-texto"></pre>
+    </div>
+    <div class="post-link">
+      <label>Link para a bio/story</label>
+      <div class="link-row">
+        <input type="text" id="post-link-url" readonly>
+        <button onclick="copiarLink()">📋</button>
+      </div>
+    </div>
+    <button class="btn-voltar" onclick="fecharDivulgacao()">← Voltar ao site</button>
+  </section>
+</div>
+
+<button id="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script src="data-source.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

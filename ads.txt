@@ -1,0 +1,11 @@
+# ads.txt — PrecoPet
+# Este arquivo é OBRIGATÓRIO para o Google AdSense aprovar a monetização.
+# SUBSTITUA pub-0000000000000000 pelo seu Publisher ID real do AdSense
+# (o mesmo número que aparece em ca-pub-XXXXXXXXXXXXXXXX, sem o "ca-")
+#
+# Você encontra esse número em: adsense.google.com → Conta → Informações da conta
+#
+# Depois de editar, faça upload deste arquivo na RAIZ do site
+# (precisa ficar acessível em: precopet.com.br/ads.txt)
+
+google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0

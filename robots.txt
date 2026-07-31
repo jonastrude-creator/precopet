@@ -1,0 +1,8 @@
+# robots.txt — PrecoPet
+# https://www.precopet.com.br/robots.txt
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.precopet.com.br/sitemap.xml

@@ -1,0 +1,98 @@
+{
+  "atualizadoEm": "2026-07-28",
+  "lojas": {
+    "amazon": { "nome": "Amazon", "cor": "#FF9900", "url": "https://www.amazon.com.br?tag=precopet-20" },
+    "magalu": { "nome": "Magalu", "cor": "#0086FF", "url": "https://www.magazinevoce.com.br/magazineprecopet" },
+    "shopee": { "nome": "Shopee", "cor": "#EE4D2D", "url": "https://shopee.com.br" }
+  },
+  "produtos": [
+    {
+      "id": 1, "cat": "racao", "marca": "Royal Canin", "nome": "Ração Medium Adult 15kg",
+      "img": "https://m.media-amazon.com/images/I/71RVFuaEJBL._AC_SL1500_.jpg",
+      "desc": "Cães adultos porte médio",
+      "links": {
+        "amazon": "https://www.amazon.com.br/dp/B07SJQ3JW4?tag=precopet-20",
+        "magalu": "https://www.magazinevoce.com.br/magazineprecopet/p/racao-royal-canin/XXX/",
+        "shopee": ""
+      }
+    },
+    {
+      "id": 2, "cat": "racao", "marca": "Golden", "nome": "Ração Formula Natural 15kg",
+      "img": "https://m.media-amazon.com/images/I/61sBqGjGYzL._AC_SL1000_.jpg",
+      "desc": "Cães adultos, frango e arroz",
+      "links": {
+        "amazon": "https://www.amazon.com.br/dp/XXXXXXX?tag=precopet-20",
+        "magalu": "",
+        "shopee": ""
+      }
+    },
+    {
+      "id": 3, "cat": "saude", "marca": "Bravecto", "nome": "Antipulgas 10-20kg Comprimido",
+      "img": "https://m.media-amazon.com/images/I/61DPr-c0SSL._AC_SL1000_.jpg",
+      "desc": "Proteção 12 semanas, dose única",
+      "links": {
+        "amazon": "https://www.amazon.com.br/dp/XXXXXXX?tag=precopet-20",
+        "magalu": "",
+        "shopee": ""
+      }
+    },
+    {
+      "id": 4, "cat": "gatos", "marca": "Whiskas", "nome": "Sachê Carne ao Molho 20 unidades",
+      "img": "https://m.media-amazon.com/images/I/71pT0w+BGIL._AC_SL1500_.jpg",
+      "desc": "Gatos adultos, 20 sachês de 85g",
+      "links": {
+        "amazon": "https://www.amazon.com.br/dp/XXXXXXX?tag=precopet-20",
+        "magalu": "",
+        "shopee": ""
+      }
+    },
+    {
+      "id": 5, "cat": "racao", "marca": "GranPlus", "nome": "Ração Choice Frango e Carne 15kg",
+      "img": "https://m.media-amazon.com/images/I/61Q-KBrLURL._AC_SL1000_.jpg",
+      "desc": "Cães adultos, custo-benefício",
+      "links": {
+        "amazon": "https://www.amazon.com.br/dp/XXXXXXX?tag=precopet-20",
+        "magalu": "",
+        "shopee": ""
+      }
+    },
+    {
+      "id": 6, "cat": "gatos", "marca": "Royal Canin", "nome": "Ração Indoor Gatos 7,5kg",
+      "img": "https://m.media-amazon.com/images/I/71vQ0h-WQPL._AC_SL1500_.jpg",
+      "desc": "Gatos adultos indoor, reduz odor",
+      "links": {
+        "amazon": "https://www.amazon.com.br/dp/XXXXXXX?tag=precopet-20",
+        "magalu": "",
+        "shopee": ""
+      }
+    },
+    {
+      "id": 7, "cat": "acessorios", "marca": "Kong", "nome": "Classic Recheável Tamanho M",
+      "img": "https://m.media-amazon.com/images/I/71Rrd5MoXFL._AC_SL1500_.jpg",
+      "desc": "Brinquedo de borracha, cães médios",
+      "links": {
+        "amazon": "https://www.amazon.com.br/dp/XXXXXXX?tag=precopet-20",
+        "magalu": "",
+        "shopee": ""
+      }
+    },
+    {
+      "id": 8, "cat": "saude", "marca": "Frontline", "nome": "Plus Antipulgas 10-20kg (3 pipetas)",
+      "img": "https://m.media-amazon.com/images/I/61CqEjC9AYL._AC_SL1000_.jpg",
+      "desc": "3 pipetas, aplicação mensal",
+      "links": {
+        "amazon": "https://www.amazon.com.br/dp/XXXXXXX?tag=precopet-20",
+        "magalu": "",
+        "shopee": ""
+      }
+    }
+  ],
+  "cupons": [
+    { "id": 1, "loja": "Amazon", "off": "Frete Grátis", "desc": "Frete grátis com Amazon Prime em produtos pet", "codigo": "PRIME", "validade": "2026-12-31", "cat": "geral" }
+  ],
+  "ticker": [
+    "🔥 Compare preços de ração, antipulgas e acessórios pet",
+    "🐶 Amazon, Magalu e Shopee em um só lugar",
+    "🐱 Encontre o melhor preço para seu pet"
+  ]
+}
